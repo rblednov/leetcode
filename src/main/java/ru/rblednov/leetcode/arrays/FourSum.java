@@ -9,20 +9,16 @@ public class FourSum {
         Map<Integer,Integer> hash1= new HashMap<>();
         for (int i1:nums1){
             for(int i2: nums2){
-                if(hash1.containsKey(i1+i2)){
-                    hash1.put(i1+i2,hash1.get(i1+i2)+1);
-                }else {
-                    hash1.put(i1+i2,1);
-                }
+                hash1.merge(i1 + i2, 1, Integer::sum);
             }
         }
 
         int response = 0;
         for (int i3:nums3){
             for(int i4: nums4){
-                if(hash1.containsKey(-(i3+i4))){
+                Integer count = hash1.get(-(i3+i4));
+                if(count!=null)
                     response = response + hash1.get(-(i3+i4));
-                }
             }
         }
 
