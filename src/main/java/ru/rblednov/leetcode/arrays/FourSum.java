@@ -38,6 +38,6 @@ public class FourSum {
         int[] nums2 = {0};
         int[] nums3 = {0};
         int[] nums4 = {0};
-        System.out.printf(String.valueOf(fourSumCount(nums1,nums2,nums3,nums4)));
+        System.out.println(fourSumCount(nums1, nums2, nums3, nums4));
     }
 }
