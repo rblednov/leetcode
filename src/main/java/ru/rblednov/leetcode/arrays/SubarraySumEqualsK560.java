@@ -22,6 +22,6 @@ public class SubarraySumEqualsK560 {
 
 
     public static void main(String[] args) {
-        System.out.println(subarraySum(new int[]{1, -1, 0}, 0));
+        System.out.println("b".getBytes()[0]^"b".getBytes()[0]);
     }
 }
