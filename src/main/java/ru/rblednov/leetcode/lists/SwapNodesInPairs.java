@@ -1,5 +1,7 @@
 package ru.rblednov.leetcode.lists;
 
+import java.util.Objects;
+
 public class SwapNodesInPairs {
     public static class ListNode {
         int val;
@@ -45,7 +47,27 @@ public class SwapNodesInPairs {
         p2.next = p1;
         return p2;
     }
+    public class Tuple{
+        int i1;
+        int i2;
 
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) {
+                return true;
+            }
+            if (!(o instanceof Tuple)) {
+                return false;
+            }
+            Tuple tuple = (Tuple) o;
+            return (i1 == tuple.i1 && i2 == tuple.i2) || (i1 == tuple.i2 && i2 == tuple.i1);
+        }
+
+        @Override
+        public int hashCode() {
+            return Objects.hash(i1, i2);
+        }
+    }
     public static void main(String[] args) {
 
 
